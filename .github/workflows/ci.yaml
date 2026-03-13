@@ -43,8 +43,8 @@ jobs:
 
       - name: Build Docker image
         run:  |
-        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/calculadora-completos-rodri:latest .
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/calculadora-completos-rodri:latest .
 
       - name: Push Docker image
         run:  |
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/calculadora-completos-rodri:latest .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/calculadora-completos-rodri:latest .
