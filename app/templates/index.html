@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Completos</title>
+</head>
+<body>
+
+<h1>Calculadora de Completos</h1>
+
+<form method="POST">
+
+    <label for="personas">Cantidad de personas:</label>
+    <input type="number" id="personas" name="personas" required>
+
+    <br><br>
+
+    <label for="completos_por_persona">Completos por persona:</label>
+    <input type="number" id="completos_por_persona" name="completos_por_persona" required>
+
+    <br><br>
+
+    <label for="tipo">Tipo de completo:</label>
+
+<select name="tipo" id="tipo">
+    <option value="italiano">Italiano</option>
+    <option value="completo">Completo</option>
+    <option value="dinamico">Dinámico</option>
+</select>
+
+    <button type="submit">Calcular</button>
+
+</form>
+
+
+{% if resultado %}
+
+<h2>Ingredientes necesarios</h2>
+
+<ul>
+    <li>Panes: {{ resultado.pan }}</li>
+    <li>Vienesas: {{ resultado.vienesas }}</li>
+    <li>Palta (g): {{ resultado.palta_gramos }}</li>
+    <li>Tomate (g): {{ resultado.tomate_gramos }}</li>
+    <li>Mayo (g): {{ resultado.mayo_gramos }}</li>
+</ul>
+
+{% endif %}
+
+</body>
+</html>
